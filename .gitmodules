@@ -1,0 +1,3 @@
+[submodule "aws"]
+	path = aws
+	url = https://github.com/606/avro-kb-aws.git
