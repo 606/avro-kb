@@ -1,3 +1,27 @@
 [submodule "aws"]
 	path = aws
 	url = https://github.com/606/avro-kb-aws.git
+[submodule "dotnet"]
+	path = dotnet
+	url = https://github.com/606/avro-kb-net.git
+[submodule "db"]
+	path = db
+	url = https://github.com/606/avro-kb-db.git
+[submodule "devops"]
+	path = devops
+	url = https://github.com/606/avro-kb-devops.git
+[submodule "nuget"]
+	path = nuget
+	url = https://github.com/606/avro-kb-nuget.git
+[submodule "sa"]
+	path = sa
+	url = https://github.com/606/avro-kb-sa.git
+[submodule "security"]
+	path = security
+	url = https://github.com/606/avro-kb-security.git
+[submodule "testing"]
+	path = testing
+	url = https://github.com/606/avro-kb-testing.git
+[submodule "tooling"]
+	path = tooling
+	url = https://github.com/606/avro-kb-tooling.git
