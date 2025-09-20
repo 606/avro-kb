@@ -1,11 +1,12 @@
 FROM node:22-slim AS builder
-WORKDIR /usr/src/app
-COPY package.json .
-COPY package-lock.json* .
+WORKDIR /app
+COPY package.json ./
+COPY package-lock.json* ./
 RUN npm ci
 
 FROM node:22-slim
-WORKDIR /usr/src/app
-COPY --from=builder /usr/src/app/ /usr/src/app/
+WORKDIR /app
+COPY --from=builder /app/node_modules ./node_modules
 COPY . .
-CMD ["npx", "quartz", "build", "--serve"]
+EXPOSE 8080
+CMD ["npx", "quartz", "build", "--serve", "--port", "8080"]

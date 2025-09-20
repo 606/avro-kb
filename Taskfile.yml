@@ -1,0 +1,33 @@
+version: '3'
+tasks:
+  install:
+    desc: Встановити залежності
+    cmds:
+      - npm install
+  
+  build:
+    desc: Зібрати Quartz сайт (для локального тестування)
+    cmds:
+      - npx quartz build
+  
+  build:prod:
+    desc: Зібрати Quartz сайт (для продакшна)
+    cmds:
+      - npx quartz build --concurrency=4
+  
+  serve:
+    desc: Запустити Quartz сервер для розробки
+    cmds:
+      - npx quartz build --serve
+  
+  serve:docker:
+    desc: Запустити через Docker
+    cmds:
+      - docker build -t avro-kb .
+      - docker run -p 8080:8080 avro-kb
+  
+  clean:
+    desc: Очистити артефакти збірки
+    cmds:
+      - rm -rf public/*
+      - rm -rf .quartz-cache/*
